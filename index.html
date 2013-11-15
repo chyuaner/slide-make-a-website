@@ -184,11 +184,144 @@
 </section>
 <section class="slide" id="selfmake-Front-End-notice">
 	<h2>前端網頁注意</h2>
+	
 	<ul>
 		<li>不要再用舊式寫法啦～與網頁外觀相關的請用CSS</li>
+		<ul><li>&lt;font&gt;, &lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;body bgcolor=””&gt;......已經在HTML5標準中剔除了！</li>
+		<li>也請用CSS排版，不要再用表格排版</li></ul>
+		<li>HTML是內容，請合乎語意！</li>
+	</ul>
+	<p>除了會影響維護容易性以外，也會影響搜尋引擎(Google)檢索</p>
+</section>
+<section class="slide" id="selfmake-Back-End-notice">
+	<h2>後端網頁注意</h2>
+	
+	<ul>
+		<li>資料庫內的密碼請加密，不要用明文存</li>
+		<ul><li>不然如果被駭客入侵，會死得很難看～</li></ul>
+		<li>絕對不要直接傳指令</li>
+		<ul><li>ex. http://localhost/index.php<strong>?cmd=rm%20-rf%20%2f</strong></li></ul>
+	</ul>
+	<p>會攸關這個網站安全程度如何（尤其是電子商務和金錢相關的更要小心）</p>
+</section>
+
+<section class="slide" id="selfmake-Back-End-notice2">
+	<h2>後端網頁常見的狀況</h2>
+	
+	<ul>
+		<li>資料庫伺服器位址要另外指定（非localhost）</li>
+		<li>資料庫名稱，很可能前面一定要有你的帳號</li>
+	</ul>
+	<p>如果是自幹系統出來的話，<strong>資料庫連接語法不能寫死啊～</strong></p>
+</section>
+<section class="slide" id="selfmake-Back-End-notice2-img">
+	<!-- TODO 補上圖片 -->
+</section>
+
+
+<!-- 網頁空間 -->
+<section class="slide" id="space">
+	<h1>有了內容，但...<br /><strong>空間呢？？</strong></h1>
+</section>
+
+<section class="slide" id="space-self">
+	<h2>自己準備空間出來</h2>
+	
+	<ul>
+		<li>機器要24hr開機且連上網路</li>
+		
+		<li>至於設備...</li>
+		<ul>
+			<li>直接拿電腦當伺服器</li>
+			<li>購買NAS檔案伺服器</li>
+			<li>可愛的樹莓派（流量小）</li>
+			<li>對你的分享器”刷機” ...嘿嘿嘿</li>
+		</ul>
 	</ul>
 </section>
 
+<!-- TODO 伺服器照片XDDD -->
+
+<section class="slide" id="space-self-computer">
+	<h2>直接拿電腦當伺服器</h2>
+	
+	<p>我個人喜歡的配置</p>
+	<ul>
+		<li>OS: Debian / CentOS (主推Linux)</li>
+		<li>網頁伺服器: Apache / Nginx</li>
+		<li>FTP: vsftpd</li>
+		<li>遠端連線: OpenSSH</li>
+	</ul>
+</section>
+
+<section class="slide" id="space-use">
+	<h1>要我自己準備設備，我沒那麼多錢啊～</h1>
+</section>
+<section class="slide" id="space-use-how-to-choose">
+	<h1>那我要怎麼挑選網頁空間？？</h1>
+</section>
+
+<section class="slide" id="space-use-choose">
+	<h2>網頁空間的挑選</h2>
+	
+	<ul>
+		<li>存放網站的檔案容量要足夠</li>
+		<li>可讓親愛的客人來訪的流量多少</li>
+		<li>要能自己另外綁網址</li>
+		<li>上傳方式（FTP or Git）</li>
+	</ul>
+</section>
+<section class="slide" id="space-use-choose-mb">
+	<!-- TODO Wordpress ex 圖床另算 -->
+</section>
+<section class="slide" id="space-use-choose-url">
+</section>
+<section class="slide" id="space-use-choose-upload">
+	<h2>上傳方式</h2>
+	
+	<p>一般來說都是用FTP上傳的</p>
+	<p>但也有採用Git push上傳的
+		<br /><small>Git是什麼？版本控制系統... 詳細可點這參考:P</small>
+	</p>
+	
+	<p><strong>絕對不要挑到”只能透過管理網頁界面上傳”的空間</strong></p>
+</section>
+
+<section class="slide" id="space-use-choose-part2">
+	<h2>網頁空間的挑選 #2</h2>
+	
+	<ul>
+		<li>如果是動態網站: 要能跑PHP+MySQL (MariaDB)</li>
+		<li>管理界面是否得心應手</li>
+		<li>是否支援.htaccess</li>
+		<li>是否可自訂404錯誤 (笑</li>
+	</ul>
+	<p>其他方面</p>
+	<ul>
+		<li>可以開幾個資料庫</li>
+		<li>FTP帳號可開多少個</li>
+		<li>有沒有提供Email</li>
+	</ul>
+</section>
+
+<!-- TODO 補上圖片 -->
+<section class="slide" id="space-use-panel-CPanel">
+</section>
+<section class="slide" id="space-use-panel-VistaPanel">
+</section>
+
+<!-- TODO 404錯誤圖片 -->
+
+<section class="slide" id="space-use-choose-notice">
+	<h2>重點是...</h2>
+	<p>請打聽評價是否夠穩...</p>
+</section>
+
+<section class="slide" id="space-use-vps">
+	<h2>VPS?? 能吃嗎？</h2>
+	<p>VPS和虛擬主機類似，但更高檔</p>
+	<p>有點類似虛擬電腦的概念，就給你一個完全由你控制的系統（大都用SSH連線的）</p>
+</section>
 
 
 <section class="slide" id="how-to-overview">
