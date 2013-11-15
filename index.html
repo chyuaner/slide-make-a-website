@@ -67,12 +67,12 @@
 <section class="slide" id="website-how-to-do">
 	<h2>你的網站是...</h2>
 
-	<ul>
-		<li>我要做什麼主題？</li>
-		<li>什麼方向？</li>
-		<li>大概要放什麼內容？</li>
-		<li>還是什麼服務？</li>
-	</ul>
+	<ol>
+		<li><h3>我要做什麼主題？</h3></li>
+		<li><h3>什麼方向？</h3></li>
+		<li><h3>大概要放什麼內容？</h3></li>
+		<li><h3>還是什麼服務？</h3></li>
+	</ol>
 </section>
 
 <!-- CMS 介紹 -->
@@ -92,10 +92,10 @@
 	<h2>Drupal</h2>
 
 	<ul>
-		<li>自由度特高、擴充性特強</li>
-		<ul><li><!-- TODO -->因為每個模組都拆得很開</li></ul>
-		<li>與其他CMS相比，上手門檻較高，中文文件偏少</li>
-		<ul><li>因為太自由模組拆太開，很多都要自己DIY搭配</li></ul>
+		<li><h3>自由度特高、擴充性特強</h3>
+			<p><!-- TODO -->因為每個模組都拆得很開</p></li>
+		<li><h3>與其他CMS相比，上手門檻較高，中文文件偏少</h3>
+			<p>因為太自由模組拆太開，很多都要自己DIY搭配</p></li>
 	</ul>
     
 	<p>Drupal正體中文站 http://drupaltaiwan.org/</p>
@@ -107,7 +107,8 @@
 	<ul>
 		<li><h3>架設部落格專用的首選！！</h3>
 			<p>我目前的部落格就採用此系統</p></li>
-		<li>有一堆現成的精緻版型 可透過模組架電子商務網站</li>
+		<li><h3>有一堆現成的精緻版型</h3>
+			<p>可透過模組架電子商務網站</p></li>
 	</ul>
 	
 	<p>WordPress.org Taiwan正體中文 http://tw.wordpress.org/</p>
@@ -122,8 +123,10 @@
 	<h2>Joomla</h2>
 	
 	<ul>
-		<li>可快速架設網站（討論區、投票、部落格、相簿、電子商務）</li>
-		<li>目前有許多精緻版型 適合做公司形象網站</li>
+		<li><h3>可快速架設網站</h3>
+			<p>（討論區、投票、部落格、相簿、電子商務）</p></li>
+		<li><h3>目前有許多精緻版型</h3>
+			<p>適合做公司形象網站</p></li>
 	</ul>
 	
 	<p>台灣Joomla社群 http://www.joomla.org.tw/</p>
@@ -133,8 +136,9 @@
 	<h2>XOOPS</h2>
 	
 	<ul>
-		<li>可快速架設網站（討論區、投票、部落格、相簿、電子商務）</li>
-		<li>適合做通用型的網站</li>
+		<li><h3>可快速架設網站</h3>
+			<p>（討論區、投票、部落格、相簿、電子商務）</p></li>
+		<li><h3>適合做通用型的網站</h3></li>
 	</ul>
 	
 	<p>XOOPS 正體中文延伸計畫 http://xoops.tnc.edu.tw/</p>
@@ -164,10 +168,10 @@
 	<h2>還是有現成資源可以用</h2>
 	
 	<ul>
-		<li>後端動態資料</li>
+		<li><h3>後端動態資料</h3></li>
 		<ul><li><a href="http://www.codeigniter.org.tw/" target="_blank">CodeIgniter</a> (PHP Framework</li></ul>
 		
-		<li>前端網頁界面</li>
+		<li><h3>前端網頁界面</h3></li>
 		<ul>
 			<li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> (Front-End Framework</li>
 			<li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font-Awesome</a> (Icon Framework</li>
@@ -188,10 +192,10 @@
 	<h2>前端網頁注意</h2>
 	
 	<ul>
-		<li>不要再用舊式寫法啦～與網頁外觀相關的請用CSS</li>
-		<ul><li>&lt;font&gt;, &lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;body bgcolor=””&gt;......已經在HTML5標準中剔除了！</li>
-		<li>也請用CSS排版，不要再用表格排版</li></ul>
-		<li>HTML是內容，請合乎語意！</li>
+		<li><h3>不要再用舊式寫法啦～與網頁外觀相關的請用CSS</h3></li>
+		<ul><li><code>&lt;font&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;body bgcolor=””&gt;</code>......已經在HTML5標準中剔除了！</li>
+			<li>也請用CSS排版，不要再用表格排版</li></ul>
+		<li><h3>HTML是內容，請合乎語意！</h3></li>
 	</ul>
 	<p>除了會影響維護容易性以外，也會影響搜尋引擎(Google)檢索</p>
 </section>
@@ -199,10 +203,10 @@
 	<h2>後端網頁注意</h2>
 	
 	<ul>
-		<li>資料庫內的密碼請加密，不要用明文存</li>
-		<ul><li>不然如果被駭客入侵，會死得很難看～</li></ul>
-		<li>絕對不要直接傳指令</li>
-		<ul><li>ex. http://localhost/index.php<strong>?cmd=rm%20-rf%20%2f</strong></li></ul>
+		<li><h3>資料庫內的密碼請加密，不要用明文存</h3>
+			<p>不然如果被駭客入侵，會死得很難看～</p></li>
+		<li><h3>絕對不要直接傳指令</h3>
+			<p>ex. http://localhost/index.php<strong>?cmd=rm%20-rf%20%2f</strong></p></li>
 	</ul>
 	<p>會攸關這個網站安全程度如何（尤其是電子商務和金錢相關的更要小心）</p>
 </section>
@@ -283,16 +287,17 @@
 </section>
 <section class="slide" id="space-use-choose-url">
 	<h2>為何要能自己另外綁網址</h2>
-	
+	<h3>嗯...這問題，<a href="javascript:$.deck('go', 'domain-why')">待會就會提到！！</a></h3>
 	<!-- TODO 待會補上 -->
 </section>
 <section class="slide" id="space-use-choose-upload">
 	<h2>上傳方式</h2>
 	
-	<p>一般來說都是用FTP上傳的</p>
-	<p>但也有採用Git push上傳的
-		<br /><small>Git是什麼？版本控制系統... 詳細可點這參考:P</small>
-	</p>
+	<ul>
+		<li><h3>一般來說都是用FTP上傳的</h3></li>
+		<li><h3>但也有採用Git push上傳的</h3>
+			<p>Git是什麼？版本控制系統... 詳細可點這參考:P</p></li>
+	</ul>
 	
 	<p><strong>絕對不要挑到”只能透過管理網頁界面上傳”的空間</strong></p>
 </section>
@@ -306,7 +311,7 @@
 		<li>是否支援.htaccess</li>
 		<li>是否可自訂404錯誤 (笑</li>
 	</ul>
-	<p>其他方面</p>
+	<h3>其他方面</h3>
 	<ul>
 		<li>可以開幾個資料庫</li>
 		<li>FTP帳號可開多少個</li>
@@ -326,7 +331,7 @@
 
 <section class="slide" id="space-use-choose-notice">
 	<h2>重點是...</h2>
-	<p>請打聽評價是否夠穩...</p>
+	<h3>請打聽評價是否夠穩...</h3>
 </section>
 
 <section class="slide" id="space-use-vps">
@@ -382,7 +387,7 @@
 	<ul>
 		<li><h3>搜尋引擎檢索的標準</h3></li>
 		<li><h3>請另外綁網址，盡量不要使用網站空間附給你的網址</h3><p>日後網站搬家時，只要重新調整網址對應即可，不需重新給別人新網址</p></li>
-		<li>千萬千萬...<strong>不要直接給人家IP啦～</strong></li>
+		<li><h3>千萬千萬...<strong>不要直接給人家IP啦～</strong></h3></li>
 	</ul>
 </section>
 
