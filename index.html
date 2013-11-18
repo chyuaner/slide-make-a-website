@@ -6,6 +6,7 @@
 	SSL 加密 （電子商務網站）
 	CMS 針對電子商務推薦套件
 	SEO 優化
+	uptime 通知
 -->
 
 <!DOCTYPE html>
@@ -69,10 +70,10 @@
 	<h2>你的網站是...</h2>
 
 	<ol>
-		<li><h3>我要做什麼主題？</h3></li>
-		<li><h3>什麼方向？</h3></li>
-		<li><h3>大概要放什麼內容？</h3></li>
-		<li><h3>還是什麼服務？</h3></li>
+		<li class="slide"><h3>我要做什麼主題？</h3></li>
+		<li class="slide"><h3>什麼方向？</h3></li>
+		<li class="slide"><h3>大概要放什麼內容？</h3></li>
+		<li class="slide"><h3>還是什麼服務？</h3></li>
 	</ol>
 </section>
 
@@ -115,11 +116,6 @@
 	<p>WordPress.org Taiwan正體中文 http://tw.wordpress.org/</p>
 </section>
 
-<section class="slide" id="cms-wordpress-part2">
-	<h2>WordPress管理頁面</h2>
-	<!-- TODO inage -->
-</section>
-
 <section class="slide" id="cms-joomla">
 	<h2>Joomla</h2>
 	
@@ -143,16 +139,6 @@
 	</ul>
 	
 	<p>XOOPS 正體中文延伸計畫 http://xoops.tnc.edu.tw/</p>
-</section>
-
-<section class="slide" id="cms-xoops-part2">
-	<h2>XOOPS 管理畫面</h2>
-	<!-- TODO inage -->
-</section>
-
-<section class="slide" id="cms-xoops-example">
-	<h2>XOOPS 範例 Fail掉的班網</h2>
-	<!-- TODO inage -->
 </section>
 
 <section class="slide" id="cms-summery">
@@ -180,23 +166,15 @@
 		</ul>
 	</ul>
 </section>
-<section class="slide" id="selfmake-Front-End-resource">
-	<!-- TODO other resource -->
-	<h2></h2>
-	
-	<p>阿...講太多...乾脆另外開個前端網頁課程啊 (茶</p>
-</section>
-<section class="slide" id="selfmake-notice">
-	<h1>雖然離題...但還是想提醒一下...</h1>
-</section>
+
 <section class="slide" id="selfmake-Front-End-notice">
 	<h2>前端網頁注意</h2>
 	
 	<ul>
-		<li><h3>不要再用舊式寫法啦～與網頁外觀相關的請用CSS</h3></li>
-		<ul><li><code>&lt;font&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;body bgcolor=””&gt;</code>......已經在HTML5標準中剔除了！</li>
+		<li class="slide"><h3>不要再用舊式寫法啦～與網頁外觀相關的請用CSS</h3></li>
+		<ul class="slide"><li><code>&lt;font&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;body bgcolor=””&gt;</code>......已經在HTML5標準中剔除了！</li>
 			<li>也請用CSS排版，不要再用表格排版</li></ul>
-		<li><h3>HTML是內容，請合乎語意！</h3></li>
+		<li class="slide"><h3>HTML是內容，請合乎語意！</h3></li>
 	</ul>
 	<p>除了會影響維護容易性以外，也會影響搜尋引擎(Google)檢索</p>
 </section>
@@ -204,9 +182,9 @@
 	<h2>後端網頁注意</h2>
 	
 	<ul>
-		<li><h3>資料庫內的密碼請加密，不要用明文存</h3>
+		<li class="slide"><h3>資料庫內的密碼請加密，不要用明文存</h3>
 			<p>不然如果被駭客入侵，會死得很難看～</p></li>
-		<li><h3>絕對不要直接傳指令</h3>
+		<li class="slide"><h3>絕對不要直接傳指令</h3>
 			<p>ex. http://localhost/index.php<strong>?cmd=rm%20-rf%20%2f</strong></p></li>
 	</ul>
 	<p>會攸關這個網站安全程度如何（尤其是電子商務和金錢相關的更要小心）</p>
@@ -239,10 +217,10 @@
 		
 		<li>至於設備...</li>
 		<ul>
-			<li>直接拿電腦當伺服器</li>
-			<li>購買NAS檔案伺服器</li>
-			<li>可愛的樹莓派（流量小）</li>
-			<li>對你的分享器”刷機” ...嘿嘿嘿</li>
+			<li class="slide">直接拿電腦當伺服器</li>
+			<li class="slide">購買NAS檔案伺服器</li>
+			<li class="slide">可愛的樹莓派（流量小）</li>
+			<li class="slide">對你的分享器”刷機” ...嘿嘿嘿</li>
 		</ul>
 	</ul>
 </section>
@@ -272,10 +250,10 @@
 	<h2>網頁空間的挑選</h2>
 	
 	<ul>
-		<li>存放網站的檔案容量要足夠</li>
-		<li>可讓親愛的客人來訪的流量多少</li>
-		<li>要能自己另外綁網址</li>
-		<li>上傳方式（FTP or Git）</li>
+		<li class="slide">存放網站的檔案容量要足夠</li>
+		<li class="slide">可讓親愛的客人來訪的流量多少</li>
+		<li class="slide">要能自己另外綁網址</li>
+		<li class="slide">上傳方式（FTP or Git）</li>
 	</ul>
 </section>
 <section class="slide" id="space-use-choose-mb">
@@ -307,16 +285,16 @@
 	<h2>網頁空間的挑選 #2</h2>
 	
 	<ul>
-		<li>如果是動態網站: 要能跑PHP+MySQL (MariaDB)</li>
-		<li>管理界面是否得心應手</li>
-		<li>是否支援.htaccess</li>
-		<li>是否可自訂404錯誤 (笑</li>
+		<li class="slide">如果是動態網站: 要能跑PHP+MySQL (MariaDB)</li>
+		<li class="slide">管理界面是否得心應手</li>
+		<li class="slide">是否支援.htaccess</li>
+		<li class="slide">是否可自訂404錯誤 (笑</li>
 	</ul>
 	<h3>其他方面</h3>
 	<ul>
-		<li>可以開幾個資料庫</li>
-		<li>FTP帳號可開多少個</li>
-		<li>有沒有提供Email</li>
+		<li class="slide">可以開幾個資料庫</li>
+		<li class="slide">FTP帳號可開多少個</li>
+		<li class="slide">有沒有提供Email</li>
 	</ul>
 </section>
 
@@ -334,7 +312,7 @@
 
 <section class="slide" id="space-use-choose-notice">
 	<h2>重點是...</h2>
-	<h3>請打聽評價是否夠穩...</h3>
+	<h3 class="slide">請打聽評價是否夠穩...</h3>
 </section>
 
 <section class="slide" id="space-use-vps">
@@ -387,9 +365,9 @@
 	<h2>網址就是你家門牌</h2>
 	
 	<ul>
-		<li><h3>搜尋引擎檢索的標準</h3></li>
-		<li><h3>請另外綁網址，盡量不要使用網站空間附給你的網址</h3><p>日後網站搬家時，只要重新調整網址對應即可，不需重新給別人新網址</p></li>
-		<li><h3>千萬千萬...<strong>不要直接給人家IP啦～</strong></h3></li>
+		<li class="slide"><h3>搜尋引擎檢索的標準</h3></li>
+		<li class="slide"><h3>請另外綁網址，盡量不要使用網站空間附給你的網址</h3><p>日後網站搬家時，只要重新調整網址對應即可，不需重新給別人新網址</p></li>
+		<li class="slide"><h3>千萬千萬...<strong>不要直接給人家IP啦～</strong></h3></li>
 	</ul>
 </section>
 
@@ -505,12 +483,12 @@
 	<h2>購買域名注意</h2>
 	
 	<ul>
-		<li><h3>如果要購買臺灣的域名，請向臺灣提供商購買</h3>
+		<li class="slide"><h3>如果要購買臺灣的域名，請向臺灣提供商購買</h3>
 			<p>雖然國外也有賣.tw域名，但會貴很多很多</p>
 			<p>相反的，如果要買國際/通用域名，請向國外購買</p></li>
-		<li><h3>請注意價錢是<strong>第一年</strong>？還是以後都是？</h3>
+		<li class="slide"><h3>請注意價錢是<strong>第一年</strong>？還是以後都是？</h3>
 			<p>有好幾家標榜價錢低廉，但到第二年價差就差非常多</p></li>
-		<li><h3>好域名就趕快搶吧～先搶先贏！！</h3></li>
+		<li class="slide"><h3>好域名就趕快搶吧～先搶先贏！！</h3></li>
 	</ul>
 </section>
 
@@ -552,7 +530,7 @@
 </section>
 
 <section class="slide" id="this-about">
-	<h2>謝謝大...家家家家家...</h2>
+	<h2>謝謝大家！！</h2>
 	
 	<h3>本投影片是採用XXX授權</h3>
 	<p>你可引用轉貼、但請標注原作者姓名</p>
