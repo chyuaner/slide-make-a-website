@@ -41,6 +41,9 @@
 	<link rel="stylesheet" href="assets/deck.js/themes/transition/horizontal-slide.css">
 	
 	<script src="assets/deck.js/modernizr.custom.js"></script>
+	<style>
+		strong {color: red;}
+	</style>
 </head>
 
 <body>
@@ -233,6 +236,7 @@
 </section>
 
 <!-- TODO 伺服器照片XDDD -->
+<!-- TODO DD-WRT -->
 
 <section class="slide" id="space-self-computer">
 	<h2>直接拿電腦當伺服器</h2>
@@ -257,10 +261,10 @@
 	<h2>網頁空間的挑選</h2>
 	
 	<ul>
-		<li class="slide">存放網站的檔案容量要足夠</li>
+		<li class="slide"><a href="javascript:$.deck('go', 'space-use-choose-mb')">存放網站的檔案容量要足夠</a></li>
 		<li class="slide">可讓親愛的客人來訪的流量多少</li>
-		<li class="slide">要能自己另外綁網址</li>
-		<li class="slide">上傳方式（FTP or Git）</li>
+		<li class="slide"><a href="javascript:$.deck('go', 'space-use-choose-url')">要能自己另外綁網址</a></li>
+		<li class="slide"><a href="javascript:$.deck('go', 'space-use-choose-upload')">上傳方式（FTP or Git）</a></li>
 	</ul>
 </section>
 <section class="slide" id="space-use-choose-mb">
@@ -305,7 +309,6 @@
 	</ul>
 </section>
 
-<!-- TODO 補上圖片 -->
 <section class="slide" id="space-use-panel-CPanel">
 	<h2>CPanel</h2>
 	<img src="images/cPanel%20X.png">
@@ -315,10 +318,41 @@
 	<img src="images/Vista%20Control%20Panel.png">
 </section>
 
-<!-- TODO 404錯誤圖片 -->
+<!-- 404錯誤圖片 -->
+<section class="slide" id="space-use-panel-edit-errpages">
+	<h2>自訂404和其他錯誤頁面</h2>
+	<img src="images/edit_err_pages.png">
+</section>
+<section class="slide" id="404pages-view-title">
+	<h1>來～讓我們好好的鑑賞吧～</h1>
+</section>
+<section class="slide" id="404pages-view-1">
+	<img src="images/404-SITCON.png">
+</section>
+<section class="slide" id="404pages-view-2">
+	<img src="images/404-Mozillians.png">
+</section>
+<section class="slide" id="404pages-view-3">
+	<img src="images/404-MozillaSUMO.png">
+</section>
+<section class="slide" id="404pages-view-4">
+	<img src="images/404-GitHub.png">
+</section>
+
+<section class="slide" id="space-use-email">
+	<h2>有沒有提供Email</h2>
+	
+	<h3 class="slide">通常什麼時後會用到？？</h3>
+	<ol>
+		<li class="slide">顧客向你註冊帳號時，<strong>要寄給他電子信箱驗證信</strong></li>
+		<li class="slide">通知顧客已成功訂購、出貨</li>
+		<li class="slide"><del>定時寄送廣告郵件</del> ←做人不要這樣嘛～</li>
+	</ol>
+	<h3 class="slide">就算沒提供，是否支援用外部SMTP...其他方式寄送？？</h3>
+</section>
 
 <section class="slide" id="space-use-choose-notice">
-	<h2>重點是...</h2>
+	<h2>不過...挑選空間更重要的...</h2>
 	<h3 class="slide text-warning">請打聽評價是否夠穩...</h3>
 </section>
 
@@ -364,6 +398,8 @@
 	</ul>
 </section>
 
+<!-- TODO PHP探真 -->
+
 <!-- 綁網址 -->
 <section class="slide" id="domain-why">
 	<h1>有空間了<br /><strong>那別人要怎麼連進來？？</strong></h1>
@@ -376,6 +412,17 @@
 		<li class="slide"><h3>請另外綁網址，盡量不要使用網站空間附給你的網址</h3><p>日後網站搬家時，只要重新調整網址對應即可，不需重新給別人新網址</p></li>
 		<li class="slide"><h3>千萬千萬...<strong>不要直接給人家IP啦～</strong></h3></li>
 	</ul>
+</section>
+
+<section class="slide" id="domain-example">
+	<h2>這個............</h2>
+	
+	<ul class="slide">
+		<li><h3><a href="http://nooooooooooooooo.com" target="_blank">http://nooooooooooooooo.com</a></h3>
+			<p><a hre="https://soundcloud.com/nooooooooooooo/nooooooooooooooo" target="_blank">聲音檔 (原網頁已拿掉按鈕)</p></li>
+		<li><h3><a href="http://yeeeeeeeeeeeeeees.com" target="_blank">http://yeeeeeeeeeeeeeees.com</a></h3></li>
+	</ul>
+	<h3>啥鬼！？？？？？？</h3>
 </section>
 
 <!-- TODO 二級網域範例 -->
@@ -505,14 +552,14 @@
 </section>
 
 <section class="slide" id="domain-subdomain-example">
-	<h2>子網域</h2>
+	<h2>有了域名以後，你可以...</h2>
 	
 	<ul>
 		<li>http://yuaner.tw</li>
-		<li>http://blog.yuaner.tw</li>
-		<li>http://img.yuaner.tw</li>
-		<li>http://album.yuaner.tw</li>
-		<li>ftp://ftp.yuaner.tw</li>
+		<li>http://<strong>blog.</strong>yuaner.tw</li>
+		<li>http://<strong>img.</strong>yuaner.tw</li>
+		<li>http://<strong>album.</strong>yuaner.tw</li>
+		<li>ftp://<strong>ftp.</strong>yuaner.tw</li>
 		<li>me@yuaner.tw</li>
 	</ul>
 </section>
@@ -535,6 +582,42 @@
 <section class="slide" id="domain-update-notice">
 	<h1>DNS設定好後可能需要花一兩天的時間對應上</h1>
 </section>
+
+<section class="slide" id="ssl-title">
+	<h1></h1>
+</section>
+
+<section class="slide" id="website-finish">
+	<h1>這樣你的網站就大致上成型了～</h1>
+</section>
+
+<section class="slide" id="uptime-title">
+	<h1>另外如果網站哪天突然掛掉了...</h1>
+</section>
+<section class="slide" id="uptime-title2">
+	<h1>會希望能在"第一時間"通知你吧～</h1>
+</section>
+<section class="slide" id="uptime-statuscake">
+	<h2><a href="https://www.statuscake.com/" target="_blank">StatusCake</a> -監控你的網站</h2>
+	
+	<img src="images/statuscake.png">
+</section>
+<section class="slide" id="uptime-hosttracker">
+	<h2><a href="http://host-tracker.com/" target="_blank">Host Tracker</a></h2>
+	<p>如果自己的主機都沒有當機，還可以向 Host Tracker 拿 uptime 貼紙放在網頁上炫耀一下。</p>
+	
+	<p><a href="http://blog.zeroplex.tw/2008/06/host-tracker.html?m=0" target="_blank">Zeroplex 生活隨筆: Host Tracker 網站監控</a></p>
+</section>
+
+<section class="slide" id="pressuretest-title">
+	<h1>想了解你的網站能承受多少人來訪啊？</h1>
+</section>
+<section class="slide" id="pressuretest-loadimpact">
+	<h2><a href="https://loadimpact.com" target="_blank">Load Impact</a> -給網站做壓力測試</h2>
+	<img src="images/loadimpact.png">
+	<p>我忘記最多能做多少連線數測試，印象中我的伺服器差不多在50人以上同時連線就差不多炸掉了 QQ</p>
+</section>
+
 
 <section class="slide" id="this-about">
 	<h2>謝謝大家！！</h2>
