@@ -94,10 +94,10 @@
 	<h2>可以使用現成的CMS</h2>
 
 	<ul>
-		<li><a href="javascript:$.deck('go', 'cms-drupal')">Drupal</a></li>
-		<li><a href="javascript:$.deck('go', 'cms-wordpress')">WordPress</a></li>
-		<li><a href="javascript:$.deck('go', 'cms-joomla')">Joomla</a></li>
-		<li><a href="javascript:$.deck('go', 'cms-xoops')">XOOPS</a></li>
+		<li><h3><a href="javascript:$.deck('go', 'cms-drupal')">Drupal</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'cms-wordpress')">WordPress</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'cms-joomla')">Joomla</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'cms-xoops')">XOOPS</a></h3></li>
 	</ul>
 </section>
 
@@ -209,8 +209,8 @@
 	<h2>後端網頁常見的狀況</h2>
 	
 	<ul>
-		<li class="slide">資料庫伺服器位址要另外指定（非localhost）</li>
-		<li class="slide">資料庫名稱，很可能前面一定要有你的帳號</li>
+		<li class="slide"><h3>資料庫伺服器位址要另外指定（非localhost）</h3></li>
+		<li class="slide"><h3>資料庫名稱，很可能前面一定要有你的帳號</h3></li>
 	</ul>
 	<p class="slide text-warning">如果是自幹系統出來的話，<strong>資料庫連接語法不能寫死啊～</strong></p>
 </section>
@@ -228,9 +228,9 @@
 	<h2>自己準備空間出來</h2>
 	
 	<ul>
-		<li>機器要24hr開機且連上網路</li>
+		<li><h3>機器要24hr開機且連上網路</h3></li>
 		
-		<li>至於設備...</li>
+		<li><h3>至於設備...</h3></li>
 		<ul>
 			<li class="slide">直接拿電腦當伺服器</li>
 			<li class="slide">購買NAS檔案伺服器</li>
@@ -266,10 +266,10 @@
 	<h2>網頁空間的挑選</h2>
 	
 	<ul>
-		<li class="slide"><a href="javascript:$.deck('go', 'space-use-choose-mb')">存放網站的檔案容量要足夠</a></li>
-		<li class="slide">可讓親愛的客人來訪的流量多少</li>
-		<li class="slide"><a href="javascript:$.deck('go', 'space-use-choose-url')">要能自己另外綁網址</a></li>
-		<li class="slide"><a href="javascript:$.deck('go', 'space-use-choose-upload')">上傳方式（FTP or Git）</a></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'space-use-choose-mb')">存放網站的檔案容量要足夠</a></h3></li>
+		<li class="slide"><h3>可讓親愛的客人來訪的流量多少</h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'space-use-choose-url')">要能自己另外綁網址</a></h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'space-use-choose-upload')">上傳方式（FTP or Git）</a></h3></li>
 	</ul>
 </section>
 <section class="slide" id="space-use-choose-mb">
@@ -386,11 +386,11 @@
 	<h2>付費...就是有保障</h2>
 	
 	<ul>
-		<li>可用空間變大、可允許流量變大、可建立更多個資料庫、可綁定多個網址.....</li>
-		<li>重點是...</li>
+		<li class="slide"><h3>可用空間變大、可允許流量變大、可建立更多個資料庫、可綁定多個網址.....</h3></li>
+		<li class="slide">重點是...</li>
 		<ul>
-			<li>因為是付費，所以空間不能隨便掛點</li>
-			<li>因為是付費，資料不能隨便消失、砍帳號</li>
+			<li class="slide"><h3>因為是付費，所以空間不能隨便掛點</h3></li>
+			<li class="slide"><h3>因為是付費，資料不能隨便消失、砍帳號</h3></li>
 		</ul>
 	</ul>
 </section>
@@ -658,136 +658,6 @@
 		<li>Framework: deck.js</li>
 		<li>圖片: -----</li>
 	</ul>
-</section>
-
-<section class="slide" id="how-to-overview">
-	<h2>How to Make a Deck</h2>
-	<ol>
-		<li>
-			<h3>Write Slides</h3>
-			<p>Slide content is simple&nbsp;HTML.</p>
-		</li>
-		<li>
-			<h3>Choose Themes</h3>
-			<p>One for slide styles and one for deck&nbsp;transitions.</p>
-		</li>
-		<li>
-			<h3>Include Extensions</h3>
-			<p>Add extra functionality to your deck, or leave it stripped&nbsp;down.</p>
-		</li>
-	</ol>
-</section>
-
-<section class="slide" id="markup">
-	<h2>The Markup</h2>
-	<p>Slides are just HTML elements with a class of <code>slide</code>.</p>
-	<pre><code>&lt;section class=&quot;slide&quot;&gt;
-   &lt;h2&gt;How to Make a Deck&lt;/h2&gt;
-   &lt;ol&gt;
-      &lt;li&gt;
-         &lt;h3&gt;Write Slides&lt;/h3&gt;
-         &lt;p&gt;Slide content is simple HTML.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;h3&gt;Choose Themes&lt;/h3&gt;
-         &lt;p&gt;One for slide styles and one for deck transitions.&lt;/p&gt;
-      &lt;/li&gt;
-      &hellip;
-   &lt;/ol&gt;
-&lt;/section&gt;</code></pre>
-</section>
-
-<section class="slide" id="themes">
-	<h2>Style Themes</h2>
-	<p>Customizes the colors, typography, and layout of slide&nbsp;content.</p>
-	<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/style-theme.css&quot;&gt;</code></pre>
-	<h2>Transition Themes</h2>
-	<p>Defines transitions between slides using CSS3 transitions.  Less capable browsers fall back to cutaways. But <strong>you</strong> aren&rsquo;t using <em>those</em> browsers to give your presentations, are&nbsp;you&hellip;</p>
-	<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/transition-theme.css&quot;&gt;</code></pre>
-</section>
-
-<section class="slide" id="extensions">
-	<h2>Extensions</h2>
-	<p>Core gives you basic slide functionality with left and right arrow navigation, but you may want more. Here are the ones included in this&nbsp;deck:</p>
-	
-	<ul>
-		<li class="slide" id="extensions-goto">
-			<strong>deck.goto</strong>: Adds a shortcut key to jump to any slide number.  Hit g, type in the slide number, and hit&nbsp;enter.
-		</li>
-		
-		<li class="slide" id="extensions-hash">
-			<strong>deck.hash</strong>: Enables internal linking within slides, deep linking to individual slides, and updates the address bar &amp; a permalink anchor with each slide&nbsp;change.
-		</li>
-
-		<li class="slide" id="extensions-menu">
-			<strong>deck.menu</strong>: Adds a menu view, letting you see all slides in a grid. Hit m to toggle to menu view, continue navigating your deck, and hit m to return to normal view. Touch devices can double-tap the deck to switch between&nbsp;views.
-		</li>
-
-		<li class="slide" id="extensions-navigation">
-			<strong>deck.navigation</strong>: Adds clickable left and right buttons for the less keyboard&nbsp;inclined.
-		</li>
-
-		<li class="slide" id="extensions-status">
-			<strong>deck.status</strong>: Adds a page number indicator. (current/total)
-		</li>
-
-		<li class="slide" id="extensions-scale">
-			<strong>deck.scale</strong>: Scales each slide to fit within the deck container using CSS Transforms for those browsers that support them.
-		</li>
-	</ul>
-	
-	<p class="slide" id="extension-folders">Each extension folder in the download package contains the necessary JavaScript, CSS, and HTML&nbsp;files. For a complete list of extension modules included in deck.js, check out the&nbsp;<a href="http://imakewebthings.github.com/deck.js/docs">documentation</a>.</p>
-</section>
-
-<section class="slide" id="nested">
-	<h2>Nested Slides</h2>
-	<p>That last slide had a few steps.  To create substeps in slides, just nest them:</p>
-	<pre><code>&lt;section class=&quot;slide&quot;&gt;
-  &lt;h2&gt;Extensions&lt;/h2&gt;
-  &lt;p&gt;Core gives you basic slide functionality...&lt;/p&gt;		
-  &lt;ul&gt;
-     &lt;li class=&quot;slide&quot;&gt;
-        &lt;h3&gt;deck.goto&lt;/h3&gt;
-        &lt;p&gt;Adds a shortcut key to jump to any slide number...&lt;/p&gt;
-     &lt;/li&gt;
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;	
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</code></pre>
-</section>
-
-<section class="slide" id="elements-images">
-	<h2>Other Elements: Images</h2>
-	<img src="http://placekitten.com/600/375" alt="Kitties">
-	<pre><code>&lt;img src=&quot;http://placekitten.com/600/375&quot; alt=&quot;Kitties&quot;&gt;</code></pre>
-</section>
-
-<section class="slide" id="elements-blockquotes">
-	<h2>Other Elements: Blockquotes</h2>
-	<blockquote cite="http://example.org">
-		<p>Food is an important part of a balanced diet.</p>
-		<p><cite>Fran Lebowitz</cite></p>
-	</blockquote>
-	<pre><code>&lt;blockquote cite=&quot;http://example.org&quot;&gt;
-  &lt;p&gt;Food is an important part of a balanced diet.&lt;/p&gt;
-  &lt;p&gt;&lt;cite&gt;Fran Lebowitz&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</code></pre>
-</section>
-
-
-<!--<section class="slide" id="elements-videos">
-	<h2>Other Elements: Video Embeds</h2>
-	<p>Embed videos from your favorite online video service or with an HTML5 video&nbsp;element.</p>
-	
-	<iframe src="http://player.vimeo.com/video/1063136?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
-	
-	<pre><code>&lt;iframe src=&quot;http://player.vimeo.com/video/1063136?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></pre>
-</section>-->
-
-<section class="slide" id="digging-deeper">
-	<h2>Digging Deeper</h2>
-	<p>If you want to learn about making your own themes, extending deck.js, and more, check out the&nbsp;<a href="../docs/">documentation</a>.</p>
 </section>
 
 <!-- deck.navigation snippet -->
