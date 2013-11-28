@@ -185,6 +185,9 @@
 		<ul class="slide"><li><code>&lt;font&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;body bgcolor=””&gt;</code>......已經在HTML5標準中剔除了！</li>
 			<li>也請用CSS排版，不要再用表格排版</li></ul>
 		<li class="slide"><h3>HTML是內容，請合乎語意！</h3></li>
+		<ul class="slide">
+			<li><code>&lt;strong&gt;</code>(強調), <code>&lt;blockquote&gt;</code>(段落引用), <code>&lt;abbr&gt;</code>(縮寫), <code>&lt;article&gt;</code>(文章), <code>&lt;footer&gt;</code>(頁尾)...</li>
+		</ul>
 	</ul>
 	<p class="slide text-warning">除了會影響維護容易性以外，也會影響搜尋引擎(Google)檢索</p>
 </section>
@@ -250,20 +253,20 @@
 
 <section class="slide" id="space-self-server">
 	<h2>我朋友的伺服器</h2>
-	
-	<!-- TODO 伺服器照片XDDD -->
+	<img src="images/P1010293.JPG" />
 </section>
 
 <section class="slide" id="space-self-Raspberry_Pi">
 	<h2>可愛的樹莓派</h2>
-	<!-- TODO 照片 -->
+	<img src="images/P1010504.JPG" style="float: right" />
 	<ul>
 		<li><h3>價錢: </h3></li>
 		<ul>
 			<li>單機板: A型 $25美元，B型$35美元（建議買B型）</li>
-			<li>臺灣官方組合價2330元/組: ModelB + 16GSD卡 + 電源組</li>
+			<li>臺灣官方組合價2330元/組: ModelB + 16G SD卡 + 電源組</li>
 		</ul>
 		<li><h3><strong>流量小</strong> &lt;-這點很重要</h3></li>
+		<li><a href="http://www.raspberrypi.com.tw/" target="_blank">Raspberry Pi台灣樹莓派</a>官網</li>
 	</ul>
 </section>
 
@@ -328,11 +331,11 @@
 	<ul>
 		<li class="slide">如果是動態網站: 要能跑PHP+MySQL (MariaDB)</li>
 		<li class="slide">管理界面是否得心應手</li>
-		<li class="slide">是否支援.htaccess</li>
-		<li class="slide">是否可自訂404錯誤 (笑</li>
 	</ul>
 	<h3>其他方面</h3>
 	<ul>
+		<li class="slide">是否支援.htaccess</li>
+		<li class="slide">是否可自訂404錯誤 (笑</li>
 		<li class="slide">可以開幾個資料庫</li>
 		<li class="slide">FTP帳號可開多少個</li>
 		<li class="slide">有沒有提供Email</li>
@@ -348,25 +351,39 @@
 	<img src="images/Vista%20Control%20Panel.png">
 </section>
 
+<section class="slide" id="space-use-panel-edit-htaccess">
+	<h2>支援.htaccess</h2>
+	
+	<h3>我在什麼時後會用到？</h3>
+	<ul>
+		<li><a href="http://sofree.cc/htaccess-index/" target="_blank">控制是否要讓觀眾看到資料夾有哪些檔案</a></li>
+		<li><a href="http://readily-notes.blogspot.tw/2011/11/url-rewrite.htmlQ" target="_blank">讓網址更漂亮一點</a></li>
+		<li><a href="http://sofree.cc/block-country/" target="_blank">控制誰可以看你的網站（阻擋部份IP）</a></li>
+		<li><a href="http://www.vixual.net/blog/archives/247" target="_blank">自訂錯誤頁面（404, 403, 500 ...）</a></li>
+	</ul>
+	<p>線上製作.htaccess - <a href="http://www.htaccesseditor.com/tc.shtml" target="_blank">.htaccess Editor</a></p>
+</section>
+
 <!-- 404錯誤圖片 -->
 <section class="slide" id="space-use-panel-edit-errpages">
 	<h2>自訂404和其他錯誤頁面</h2>
 	<img src="images/edit_err_pages.png">
 </section>
+
 <section class="slide" id="404pages-view-title">
 	<h1>來～讓我們好好的欣賞404吧～</h1>
 </section>
 <section class="slide" id="404pages-view-1">
-	<a href="http://staff.sitcon.org/asdfg" target="_blank"><img src="images/404-SITCON.png"></a>
+	<a href="http://staff.sitcon.org/asdfg" target="_blank"><img src="images/404-SITCON.png" /></a>
 </section>
 <section class="slide" id="404pages-view-2">
-	<a href="https://mozillians.org/en-US/asefjzdkcvlxadnv" target="_blank"><img src="images/404-Mozillians.png"></a>
+	<a href="https://mozillians.org/en-US/asefjzdkcvlxadnv" target="_blank"><img src="images/404-Mozillians.png" /></a>
 </section>
 <section class="slide" id="404pages-view-3">
-	<a href="https://support.mozilla.org/zh-TW/asdfg" target="_blank"><img src="images/404-MozillaSUMO.png">
+	<a href="https://support.mozilla.org/zh-TW/asdfg" target="_blank"><img src="images/404-MozillaSUMO.png" /></a>
 </section>
 <section class="slide" id="404pages-view-4">
-	<a href="https://github.com/asdfghjkl;%27" target="_blank"><img src="images/404-GitHub.png"></a>
+	<a href="https://github.com/asdfghjkl;%27" target="_blank"><img src="images/404-GitHub.png" /></a>
 </section>
 
 <section class="slide" id="space-use-email">
@@ -433,16 +450,18 @@
 	</ul>
 </section>
 
-<!-- TODO PHP探真 -->
 <section class="slide" id="space-tester-title">
 	<h1>我想測試我挑的空間如何？</h1>
 </section>
 
 <section class="slide" id="space-tester-phpinfo">
 	<h2>使用phpinfo函式來查詢資訊</h2>
-	
+	<p>phpinfo.php: 
 	<pre><code>&lt;?php
-phpinfo();</code></pre>
+phpinfo();</code></pre></p>
+</section>
+<section class="slide" id="space-tester-phpinfo-img">
+	<img src="images/phpinfo.png" />
 </section>
 
 <section class="slide" id="space-tester-phptestinfo">
@@ -474,17 +493,17 @@ phpinfo();</code></pre>
 	<h2>那這兩個網址............</h2>
 	
 	<ul class="slide">
-		<li><h3><a href="http://nooooooooooooooo.com" target="_blank">http://nooooooooooooooo.com</a></h3>
-			<p><a href="https://soundcloud.com/nooooooooooooo/nooooooooooooooo" target="_blank">聲音檔 (原網頁已拿掉按鈕)</p></li>
 		<li><h3><a href="http://yeeeeeeeeeeeeeees.com" target="_blank">http://yeeeeeeeeeeeeeees.com</a></h3></li>
+		<li><h3><a href="http://nooooooooooooooo.com" target="_blank">http://nooooooooooooooo.com</a></h3>
+			<p><a href="https://soundcloud.com/nooooooooooooo/nooooooooooooooo" target="_blank">聲音檔 (原網頁已拿掉按鈕)</p></a></li>
 	</ul>
 	<h3 class="slide">啥鬼！？？？？？？</h3>
 </section>
 
 <section class="slide" id="domain-whois">
 	<h2>可以用WHOIS查詢</h2>
-	<img src="images/whois.png">
-	<p><a href="http://www.whois365.com/tw/" target="_blank">http://www.whois365.com/tw/</a></p>
+	<a href="http://www.whois365.com/tw/" target="_blank"><img src="images/whois.png">
+	<p>http://www.whois365.com/tw/</p></a>
 </section>
 
 <section class="slide" id="domain-type">
@@ -530,7 +549,7 @@ phpinfo();</code></pre>
 		<li><a href="http://www.noip.com/" target="_blank">NO-IP</a> - *.no-ip.org / -.no-ip.info / ...</li>
 		<li><a href="http://www.registry.cu.cc/" target="_blank">CU.CC</a> - *.cu.cc</li>
 	</ul>
-	<h3 class="slide text-warning">不過這據說因為太容易取得而造成濫用，已被Google封殺，不檢索進搜尋裡</h3>
+	<h3 class="slide text-warning">不過據說因為太容易取得而造成濫用，已被Google封殺，不檢索進搜尋裡</h3>
 </section>
 
 <section class="slide" id="domain-sub">
@@ -553,7 +572,7 @@ phpinfo();</code></pre>
 		<li><h3>國家頂級域名</h3>
 			<p>.tw .cc .in .jp</p></li>
 	</ul>
-	<p>參考資料 http://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D</p>
+	<p>參考資料 <a href="http://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D" target="_blank">http://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D</a></p>
 </section>
 <section class="slide" id="domain-premium-country-but">
 	<h2>不過現在越來越模糊了</h2>
