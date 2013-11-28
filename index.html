@@ -255,8 +255,8 @@
 	<h2>直接拿電腦當伺服器 - Windows</h2>
 	
 	<ul>
-		<li><h3><a href="http://www.apachefriends.org/zh_tw/xampp-windows.html" target="_blank">XAMPP</a> (也有Linux版喔)</h3>
-			<p>功能完整！有統一介面管理！！</p></li>
+		<li><h3><a href="http://www.apachefriends.org/zh_tw/xampp-windows.html" target="_blank">XAMPP</a></h3>
+			<p>功能完整！有統一介面管理！！ (也有Linux版喔)</p></li>
 		<li><h3><a href="http://www.appservnetwork.com/" target="_blank">APPServ</a></h3>
 			<p>檔案小，功能很基本</p></li>
 		<li><h3><a href="http://www.ampps.com/" target="_blank">AMPPS</a></h3></li>
@@ -472,12 +472,10 @@
 
 <section class="slide" id="space-tester-phpinfo">
 	<h2>使用phpinfo函式來查詢資訊</h2>
-	<p>phpinfo.php: 
-	<pre><code>&lt;?php
-phpinfo();</code></pre></p>
-</section>
-<section class="slide" id="space-tester-phpinfo-img">
 	<img src="images/phpinfo.png" />
+	<p>phpinfo.php: </p>
+	<pre><code>&lt;?php
+phpinfo();</code></pre>
 </section>
 
 <section class="slide" id="space-tester-phptestinfo">
@@ -751,10 +749,10 @@ phpinfo();</code></pre></p>
 	<h2>你可能會需要...</h2>
 	
 	<ul>
-		<li><h3>掛掉的即時通知</h3></li>
-		<li><h3>了解進入你的網站要花多久時間？</h3></li>
-		<li><h3>壓力測試 - 能承受多少人來訪</h3></li>
-		<li><h3>SEO - 對搜尋引擎最佳化</h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'uptime-title')">掛掉的即時通知</a></h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'performance-title')">了解進入你的網站要花多久時間？</a></h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'pressuretest-title')">壓力測試 - 能承受多少人來訪</a></h3></li>
+		<li class="slide"><h3>SEO - 對搜尋引擎最佳化</h3></li>
 	</ul>
 </section>
 
@@ -767,7 +765,7 @@ phpinfo();</code></pre></p>
 <section class="slide" id="uptime-statuscake">
 	<h2><a href="https://www.statuscake.com/" target="_blank">StatusCake</a> -監控你的網站</h2>
 	
-	<img src="images/statuscake.png">
+	<img src="images/statuscake.png" />
 </section>
 <section class="slide" id="uptime-hosttracker">
 	<h2><a href="http://host-tracker.com/" target="_blank">Host Tracker</a></h2>
@@ -777,7 +775,35 @@ phpinfo();</code></pre></p>
 </section>
 
 <!-- TODO 網站測速 -->
+<section class="slide" id="performance-title">
+	<h1>進入你的網站要花多久時間？</h1>
+</section>
 
+<section class="slide" id="performance-recommend-tools">
+	<h2>可以使用網站效能分析工具</h2>
+	
+	<ul>
+		<li><h3><a href="javascript:$.deck('go', 'performance-recommend-tools-pingdom')">pingdom TOOLS</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'performance-recommend-tools-gtmetrix')">GTmetrix</a></h3></li>
+		<li><h3><a href="http://www.webpagetest.org/" target="_blank">WebPageTest</a></h3></li>
+		<li><h3><a href="http://developer.yahoo.com/yslow/" target="_blank">YSlow</a> - <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/" target="_blank">Firefox擴充套件</a></h3>
+			<p><a href="http://kevintsengtw.blogspot.tw/2010/08/yslow.html" target="_blank">使用YSlow幫你的網站靜態檔案做優化處理 - mrkt 的程式學習筆記</a></p></li>
+	</ul>
+</section>
+
+<section class="slide" id="performance-recommend-tools-pingdom">
+	<h2><a href="http://tools.pingdom.com/fpt/" target="_blank">pingdom TOOLS</a></h2>
+	<img src="images/pingdom-Website_speed_test.png" />
+	<p>參考資料: <a href="http://sofun.tw/pingdom/" target="_blank">[教學] Pingdom 網頁載入速度測試工具，找出拖垮網站速度元凶 - 簡單生活Easylife</a></p>
+</section>
+
+<section class="slide" id="performance-recommend-tools-gtmetrix">
+	<h2><a href="http://gtmetrix.com/" target="_blank">GTmetrix</a></h2>
+	<img src="images/GTmetrix-blog.yuaner.tw.png" />
+	<p>參考資料: <a href="http://www.playpcesor.com/2010/05/gtmetrix.html" target="_blank">GTmetrix 線上免費分析網站效能缺陷，根治拖慢網頁速度元兇 - 電腦玩物</a></p>
+</section>
+
+<!-- 壓力測試 -->
 <section class="slide" id="pressuretest-title">
 	<h1>想了解你的網站能承受多少人來訪啊？</h1>
 </section>
