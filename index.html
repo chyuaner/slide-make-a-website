@@ -181,6 +181,7 @@
 	<h2>前端網頁注意</h2>
 	
 	<ul>
+		
 		<li class="slide"><h3>不要再用舊式寫法啦～與網頁外觀相關的請用CSS</h3></li>
 		<ul class="slide"><li><code>&lt;font&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;body bgcolor=””&gt;</code>......已經在HTML5標準中剔除了！</li>
 			<li>也請用CSS排版，不要再用表格排版</li></ul>
@@ -188,6 +189,8 @@
 		<ul class="slide">
 			<li><code>&lt;strong&gt;</code>(強調), <code>&lt;blockquote&gt;</code>(段落引用), <code>&lt;abbr&gt;</code>(縮寫), <code>&lt;article&gt;</code>(文章), <code>&lt;footer&gt;</code>(頁尾)...</li>
 		</ul>
+		<li class="slide"><h3>麻煩請標注一下這個網頁的編碼</h3></li>
+		<ul class="slide"><li><code>&lt;meta charset="utf-8" /&gt;</code></li></ul>
 	</ul>
 	<p class="slide text-warning">除了會影響維護容易性以外，也會影響搜尋引擎(Google)檢索</p>
 </section>
@@ -244,10 +247,10 @@
 	
 	<p>我個人喜歡的配置</p>
 	<ul>
-		<li>OS: Debian / CentOS (主推Linux)</li>
+		<li>OS: Linux Debian / Linux CentOS</li>
 		<li>網頁伺服器: Apache / Nginx</li>
 		<li>FTP: vsftpd</li>
-		<li>遠端連線: OpenSSH</li>
+		<li>遠端連線: OpenSSL, VNCServer</li>
 	</ul>
 </section>
 
@@ -295,6 +298,48 @@
 	</ul>
 	
 	<h3 class="text-warning">警告！刷機有風險，有可能導致分享器報銷，請確定了解自己再做什麼以後再下手</h3>
+</section>
+<section class="slide" id="space-self-network">
+	<h2>別忘了，網路嘿啊...</h2>
+	
+	<ul>
+		<li class="slide"><h3>網路連線速度要夠快</h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'space-self-network-check_ip')">必需要有對外IP</a></h3></li>
+		<ul>
+			<li class="slide">固定IP: 那最好也是最簡單啦～那只要把網址對到這個IP即可</li>
+			<li class="slide">浮動IP: <a href="javascript:$.deck('go', 'space-self-dyndns')">請使用動態IP對應的服務</a></li>
+		</ul>
+	</ul>
+</section>
+<section class="slide" id="space-self-network-check_ip">
+	<h2>你的電腦本身是不是外部IP</h2>
+	
+	<!-- TODO image -->
+	<h3>可用此方法檢查:</h3>
+	<ol>
+		<li>打開終端機（命令提示字元）輸入: <code>ifconfig</code>
+			<br />（Windows 則輸入: <code>ipconfig</code>）</li>
+		<li>到<a href="http://myip.easylife.tw/" target="_blank">我的IP是多少？</a>來比對是否一樣</li>
+	</ol>
+</section>
+<section class="slide" id="space-self-network-no_publicip">
+	<h2>如果你的電腦不是外部IP</h2>
+	
+	<ul>
+		<li><h3>請對你的分享器設定</h3></li>
+		<li><h3>如果你是用<strong>社區網路</strong>、<strong>外面租屋</strong>（每戶共用一組IP上網）</h3>
+			<p>只能找社區的網管幫你開某對外的Port，否則無解～</p></li>
+	</ul>
+</section>
+<section class="slide" id="space-self-dyndns">
+	<h2>浮動的對外IP</h2>
+	<h3>如果你每一次連線時得到的IP不一樣
+		<br />可使用提供動態DNS對應服務: </h3>
+	<ul>
+		<li><a href="http://freedns.afraid.org/" target="_blank">FreeDNS</a></li>
+		<li><a href="http://dyndns.org/" target="_blank">DynDNS.org</a></li>
+		<li><a href="http://www.noip.com/" target="_blank">No-IP</a></li>
+	</ul>
 </section>
 
 <section class="slide" id="space-use">
