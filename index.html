@@ -13,7 +13,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>來架網站吧！！我的架站經驗～</title>
+	<title>來架網站吧！！我的架站經驗談～</title>
 	
 	<meta name="description" content="這是我架起一個個人網站所得到的經驗，就用這份投影片分享給大家吧！！">
 	<meta name="author" content="元兒～">
@@ -39,6 +39,7 @@
 	<style>
 		strong {color: red;}
 		.text-warning {color: orange;}
+		p.big-text {font-size:3em; color:darkorange; text-align:center;}
 	</style>
 </head>
 
@@ -53,7 +54,7 @@
 <article class="deck-container">
 <!-- Begin slides -->
 <section class="slide" id="title-slide">
-	<h1>來架網站吧！！<br />我的架站經驗～</h1>
+	<h1>來架網站吧！！<br />我的架站經驗談～</h1>
 </section>
 
 <!--<section class="slide" id="about-me">
@@ -65,6 +66,17 @@
 	</ul>
 
 </section>-->
+
+<section class="slide" id="menu">
+	<h2>大致上要做的事...</h2>
+	
+	<ol>
+		<li><h3><a href="javascript:$.deck('go', 'prepare-website')">規劃、選擇採用的CMS/製作網站</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'space')">打造/挑選 網頁空間</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'domain-why')">榜上你的網址</a></h3></li>
+		<li><h3><a href="javascript:$.deck('go', 'maintain-title')">網站的優化</a></h3></li>
+	</ol>
+</section>
 
 <!-- 網站內容 -->
 
@@ -250,6 +262,8 @@ $result = $db_connect-&gt;query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX<
 require_once(&quot;db_config.php&quot;); //讀取連結資料庫資訊
 // 連接資料庫
 $db = mysql_connect(<strong>$DB_SERV</strong>,<strong>$DB_USER</strong>,<strong>$DB_PASS</strong>) or die(mysql_error());
+// 指定這個資料庫
+mysql_select_db(<strong>$DB_NAME</strong>,$db);
 // 查詢uj_users表格
 $db_table = mysql_query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>.&quot;users&quot;) or die(mysql_error());</code></pre>
 </section>
@@ -341,7 +355,8 @@ $db_table = mysql_query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>
 	
 	<ul>
 		<li class="slide"><h3>網路連線速度要夠快</h3></li>
-		<li class="slide"><h3><a href="javascript:$.deck('go', 'space-self-network-check_ip')">必需要有對外IP</a></h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'space-self-network-check_ip')">必需要有對外IP</a></h3>
+			<p>什麼是對外IP？可參考<a href="http://briian.com/777/ip.html" target="_blank">重灌狂人的外部電腦要用什麼IP才能連到我的電腦？</a></p></li>
 		<ul>
 			<li class="slide">固定IP: 那最好也是最簡單啦～那只要把網址對到這個IP即可</li>
 			<li class="slide">浮動IP: <a href="javascript:$.deck('go', 'space-self-dyndns')">請使用動態IP對應的服務</a></li>
@@ -378,6 +393,17 @@ $db_table = mysql_query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>
 		<li><a href="http://www.noip.com/" target="_blank">No-IP</a></li>
 	</ul>
 </section>
+<section class="slide" id="space-self-dyndns-setup">
+	<h2>設定浮動的對外IP</h2>
+	
+	<img src="images/ddwrt-ddns.png" style="float: right; margin-left:6px;" />
+	<ul>
+		<li><h3>下載這個服務給你的軟體</h3>
+			<p>當你重新連線後，程式會自動抓你目前的IP，並把網址重新對應上。</p></li>
+		<li><h3>使用分享器提供的功能</h3>
+			<p>方式如上述，只不過是對分享器設定，不是電腦。</p></li>
+	</ul>
+</section>
 
 <section class="slide" id="space-use">
 	<h1>要我自己準備設備，我沒那麼多錢啊～</h1>
@@ -406,7 +432,8 @@ $db_table = mysql_query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>
 </section>
 <section class="slide" id="space-use-choose-url">
 	<h2>為何要能自己另外綁網址</h2>
-	<h3>嗯...這問題，<a href="javascript:$.deck('go', 'domain-why')">待會就會提到！！</a></h3>
+	<h3>嗯...這問題</h3>
+	<p class="slide big-text"><a href="javascript:$.deck('go', 'domain-why')">待會就會提到！！</a></p>
 </section>
 <section class="slide" id="space-use-choose-upload">
 	<h2>上傳方式</h2>
@@ -539,7 +566,7 @@ $db_table = mysql_query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>
 	</ul>
 </section>
 <section class="slide" id="space-recommend-premium">
-	<h2>推薦的付費空間</h2>
+	<h2>可以考慮的付費空間</h2>
 	
 	<ul>
 		<li><h3><a href="http://mousems.com/vps/" target="_blank">MouseMs's VPS主機合租服務(虛擬主機)</a></h3></li>
@@ -836,7 +863,7 @@ phpinfo();</code></pre>
 		<li class="slide"><h3><a href="javascript:$.deck('go', 'uptime-title')">掛掉的即時通知</a></h3></li>
 		<li class="slide"><h3><a href="javascript:$.deck('go', 'performance-title')">了解進入你的網站要花多久時間？</a></h3></li>
 		<li class="slide"><h3><a href="javascript:$.deck('go', 'pressuretest-title')">壓力測試 - 能承受多少人來訪</a></h3></li>
-		<li class="slide"><h3>SEO - 對搜尋引擎最佳化</h3></li>
+		<li class="slide"><h3><a href="javascript:$.deck('go', 'seo-title')">對搜尋引擎最佳化</a></h3></li>
 	</ul>
 </section>
 
@@ -906,9 +933,11 @@ phpinfo();</code></pre>
 	
 	<ul>
 		<li><h3><a href="http://www.google.com/intl/zh-TW/analytics/" target="_blank">Google Analytics</a></h3></li>
-			<ul><li>若使用Wordpress架站，可搭配<a href="http://wordpress.org/plugins/googleanalytics/" target="_blank">Google Analytics</a>></li></ul>
+			<ul><li>若使用Wordpress架站，可搭配<a href="http://wordpress.org/plugins/googleanalytics/" target="_blank">Google Analytics</a></li></ul>
 		<li><h3><a href="http://statcounter.com/" target="_blank">StatCounter</a></h3></li>
 			<ul><li>若使用Wordpress架站，可搭配<a href="http://wordpress.org/plugins/official-statcounter-plugin-for-wordpress/" target="_blank">StatCounter - Free Real Time Visitor Stats</a>></li></ul>
+		<li><h3><a href="http://counter.fc2.com/tw/" target="_blank">FC2計數器</a></h3>
+			<p>非常可愛的計數器...</p></li>
 		<li><h3><del>Yahoo 站長工具</del> （已倒閉...哭哭）</h3></li>
 	</ul>
 </section>
@@ -926,7 +955,7 @@ phpinfo();</code></pre>
 	<p>在"自訂及控制"（工具列的選項紐）→"設定"→"顯示進階設定"那邊就能找到。</p>
 </section>
 
-<!-- TODO SEO -->
+<!-- SEO -->
 <section class="slide" id="seo-title">
 	<h1>網頁背後的摘要</h1>
 </section>
@@ -950,7 +979,17 @@ phpinfo();</code></pre>
 </section>
 
 <section class="slide" id="seo-meta">
+	<h2>網頁上的<code>&lt;meta&gt;</code>也是搜尋引擎檢索根據</h2>
 	
+	<h3>相關教學</h3>
+	<ul>
+		<li><a href="http://seo.soft4fun.net/2009/05/seo%E6%8A%80%E8%A1%93-element/" target="_blank">硬是要SEO！: [SEO教學,SEO技術] HTML META Element</a></li>
+		<li><a href="http://blog.seo-tw.org/2010/10/seo-meta.html" target="_blank">台湾SEO學院: SEO修身篇 | 五個最常誤用的Meta值</a></li>
+	</ul>
+	<h3>本投影片範例</h3>
+	<pre><code>&lt;meta name=&quot;description&quot; content=&quot;這是我架起一個個人網站所得到的經驗，就用這份投影片分享給大家吧！！&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;元兒～&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;架站經驗 架站&quot;&gt;</code></pre>
 </section>
 
 <section class="slide" id="seo-facebook">
@@ -969,17 +1008,40 @@ phpinfo();</code></pre>
 </section>
 
 
+<section class="slide" id="deckjs-title">
+	<h1>最後...很想告訴大家</h1>
+</section>
+<section class="slide" id="deckjs-use">
+	<h2>這份投影片完全就是用網頁寫的！！</h2>
+	
+	<h3>採用模板deck.js</h3>
+	<ul>
+		<li>一個<code>&lt;section&gt;</code>包起來就是一張投影片</li>
+		<li><a target="_blank" href="http://imakewebthings.com/deck.js/">http://imakewebthings.com/deck.js/</a></li>
+		<li>有空可以研究看看喔！！</li>
+	</ul>
+</section>
+<section class="slide" id="deckjs-fun">
+	<h1>網頁真的可以做很多事喔！！！</h1>
+</section>
+
+<section class="slide" id="finish">
+	<h1>以上...呼...<br />希望有幫到大家！</h1>
+</section>
+<section class="slide" id="finish-2">
+	<h1>我還是想大喊...</h1>
+</section>
+<section class="slide" id="finish-3">
+	<h1>架站真的很好玩！</h1>
+</section>
+
 <section class="slide" id="this-about">
 	<h2>謝謝大家！！</h2>
 	
 	<h3>本投影片是採用XXX授權</h3>
 	<p>你可引用轉貼、但請標注原作者姓名</p>
 	
-	<h3>採用資源</h3>
-	<ul>
-		<li>Framework: deck.js</li>
-		<li>圖片: -----</li>
-	</ul>
+	<h3>此投影片原始碼在<a target="_blank" href="https://github.com/chyuaner/slide-make-a-website">Github上</a>！！</h3>
 </section>
 
 <!-- deck.navigation snippet -->
