@@ -15,9 +15,9 @@
 	
 	<title>來架網站吧！！我的架站經驗～</title>
 	
-	<!-- TODO 描述 -->
-	<meta name="description" content="">
+	<meta name="description" content="這是我架起一個個人網站所得到的經驗，就用這份投影片分享給大家吧！！">
 	<meta name="author" content="元兒～">
+	<meta name="keywords" content="架站經驗 架站">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 	
 	<!-- Core and extension CSS files -->
@@ -215,10 +215,47 @@
 	</ul>
 	<p class="slide text-warning">如果是自幹系統出來的話，<strong>資料庫連接語法不能寫死啊～</strong></p>
 </section>
+<section class="slide" id="selfmake-Back-End-notice2-example-pdo">
+	<h2>範例: 採用PDO -不要寫死！！</h2>
+	
+	<p>db_config.php:</p>
+	<pre><code>&lt;?php
+<strong>$DB_SERV</strong> = &quot;localhost&quot;;&nbsp;&nbsp; &nbsp;// 資料庫伺服器名稱
+<strong>$DB_USER</strong> = &quot;yuan&quot;;&nbsp;&nbsp; &nbsp;// 資料庫使用者名稱
+<strong>$DB_PASS</strong> = &quot;passwd&quot;;&nbsp;&nbsp; &nbsp;// 資料庫使用者密碼
+<strong>$DB_NAME</strong> = &quot;my_db&quot;;&nbsp;&nbsp; &nbsp;// 指定要使用哪個資料庫
+<strong>$FORM_PREFIX</strong> = &quot;uj_&quot;;&nbsp;&nbsp; &nbsp;// 資料表的前綴字元</code></pre>
+
+	<p>connect.php:</p>
+	<pre><code>&lt;?php
+require_once(&quot;db_config.php&quot;); // 讀取連結資料庫資訊
+// 連接資料庫
+$db_connect = new PDO(&quot;mysql:dbname={<strong>$DB_NAME</strong>};host:{<strong>$DB_SERV</strong>};charset=utf8&quot;, <strong>$DB_USER</strong>, <strong>$DB_PASS</strong>);
+// 查詢uj_users表格
+$result = $db_connect-&gt;query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>.&quot;users&quot;);</code></pre>
+</section>
+<section class="slide" id="selfmake-Back-End-notice2-example-tr_mysql">
+	<h2>範例: 採用傳統寫法 -不要寫死！！</h2>
+	
+	<p>db_config.php:</p>
+	<pre><code>&lt;?php
+<strong>$DB_SERV</strong> = &quot;localhost&quot;;&nbsp;&nbsp; &nbsp;// 資料庫伺服器名稱
+<strong>$DB_USER</strong> = &quot;yuan&quot;;&nbsp;&nbsp; &nbsp;// 資料庫使用者名稱
+<strong>$DB_PASS</strong> = &quot;passwd&quot;;&nbsp;&nbsp; &nbsp;// 資料庫使用者密碼
+<strong>$DB_NAME</strong> = &quot;my_db&quot;;&nbsp;&nbsp; &nbsp;// 指定要使用哪個資料庫
+<strong>$FORM_PREFIX</strong> = &quot;uj_&quot;;&nbsp;&nbsp; &nbsp;// 資料表的前綴字元</code></pre>
+
+	<p>connect.php:</p>
+	<pre><code>&lt;?php
+require_once(&quot;db_config.php&quot;); //讀取連結資料庫資訊
+// 連接資料庫
+$db = mysql_connect(<strong>$DB_SERV</strong>,<strong>$DB_USER</strong>,<strong>$DB_PASS</strong>) or die(mysql_error());
+// 查詢uj_users表格
+$db_table = mysql_query(&quot;SELECT * FROM &quot;.<strong>$FORM_PREFIX</strong>.&quot;users&quot;) or die(mysql_error());</code></pre>
+</section>
 <section class="slide" id="selfmake-Back-End-notice2-img">
 	<img src="images/db_php_config.png">
 </section>
-
 
 <!-- 網頁空間 -->
 <section class="slide" id="space">
@@ -856,7 +893,7 @@ phpinfo();</code></pre>
 </section>
 <section class="slide" id="pressuretest-loadimpact">
 	<h2><a href="https://loadimpact.com" target="_blank">Load Impact</a> -給網站做壓力測試</h2>
-	<img src="images/loadimpact.png">
+	<img src="images/loadimpact.png" />
 	<p>我忘記最多能做多少連線數測試，印象中我的伺服器差不多在50人以上同時連線就差不多炸掉了 QQ</p>
 </section>
 
@@ -875,8 +912,62 @@ phpinfo();</code></pre>
 		<li><h3><del>Yahoo 站長工具</del> （已倒閉...哭哭）</h3></li>
 	</ul>
 </section>
+<section class="slide" id="analytics-no_track_me-title">
+	<h1>如果不想讓網站的主人知道我是從哪來？</h1>
+</section>
+<section class="slide" id="analytics-no_track_me-firefox">
+	<h2>Firefox 設定不要追蹤我</h2>
+	<img src="images/firefox-track_me.png" />
+	<p>在"編輯"→"偏好設定"→"個人隱私"那邊就能找到。</p>
+</section>
+<section class="slide" id="analytics-no_track_me-chromium">
+	<h2>Chromium 設定不要追蹤我</h2>
+	<img src="images/chromium-track_me.png" />
+	<p>在"自訂及控制"（工具列的選項紐）→"設定"→"顯示進階設定"那邊就能找到。</p>
+</section>
 
 <!-- TODO SEO -->
+<section class="slide" id="seo-title">
+	<h1>網頁背後的摘要</h1>
+</section>
+<section class="slide" id="seo-security-title">
+	<h1>有人覺得搜尋優化<br />"完全"不用管</h1>
+</section>
+<section class="slide" id="seo-security-passwdlist">
+	<h2>那看到這個呢......？</h2>
+	<img src="images/google-search-passwd.png" />
+	<p>我<strong>"只是"</strong>搜尋，完全沒用啥高深的技術......</p>
+	<p>不要讓搜尋引擎爬到啊......囧</p>
+</section>
+<section class="slide" id="seo-google-robots">
+	<h2>寫Robots.txt來控制Google的檢索</h2>
+	
+	<ul>
+		<li><h3><a href="https://support.google.com/webmasters/answer/156449?hl=zh-Hant" target="_blank">Google: 使用 robots.txt 檔案來攔截或移除網頁</a></h3></li>
+		<li><h3><a href="http://gordon168.tw/?p=202" target="_blank">高登工作室: 用Robots.txt來和搜尋機器人打交道</a></h3></li>
+		<li><h3><a href="http://eric0703.pentaxfans.net/2016" target="_blank">Eric的攝影世界: robot.txt的規則以及寫法</a></h3></li>
+	</ul>
+</section>
+
+<section class="slide" id="seo-meta">
+	
+</section>
+
+<section class="slide" id="seo-facebook">
+	<h2>Facebook的摘文</h2>
+	
+	<ul>
+		<li><h3><a href="https://developers.facebook.com/tools/debug/" target="_blank">可從Debugger預覽摘文的樣子（並清除快取）</a></h3></li>
+		<li><h3><a href="http://blog.yuaner.tw/2010/07/facebook-track/" target="_blank">很久以前寫的: 控制Facebook轉貼連結摘文內容</a></h3></li>
+	</ul>
+	<pre><code>&lt;meta property=&quot;og:title&quot; content=&quot;The Rock&quot;/&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;movie&quot;/&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;http://www.imdb.com/title/tt0117500/&quot;/&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;http://ia.media-imdb.com/rock.jpg&quot;/&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;IMDb&quot;/&gt;</code></pre>
+	<cite>Code來源: <a target="_blank" href="http://epromotor.pixnet.net/blog/post/30997291">打造方便分享的網頁|Open Graph Protocol篇</a></cite>
+</section>
+
 
 <section class="slide" id="this-about">
 	<h2>謝謝大家！！</h2>
